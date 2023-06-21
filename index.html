@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description">
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="https://images.fotmob.com/image_resources/logo/leaguelogo/87.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Equipos de LaLiga!</title>
+</head>
+
+<body class="m-0 p-0 h-screen w-screen flex flex-col overflow-x-hidden">
+    <button id="btn-input-filtro" class="absolute z-100 inset-x-[90%] md:inset-x-[96.5%] inset-y-[2%] h-[30px] w-[30px]">
+        <img class="h-full w-full" src="./images/filtro.svg" alt="Busqueda" />
+    </button>
+    <header class="h-auto w-full flex flex-col">
+        <div class="h-14 md:h-24 w-full flex justify-center items-center mt-5 pb-5 border-b border-black">
+            <img class="h-full me-2" src="https://images.fotmob.com/image_resources/logo/leaguelogo/87.png"
+                alt="LaLiga" />
+            <h1 class="text-[40px] md:text-[67px] ms-2 flex justify-center items-center">
+                LaLiga
+            </h1>
+        </div>
+        <nav id="navbar" class="h-auto w-full flex flex-col">
+            <ul 
+                id="lista-equipos"
+                class="flex min-h-[20vh] min-w-full overflow-x-scroll hide-scrollbar overflow-y-hidden px-2 md:px-7 py-1"
+            >
+                <!-- aca se renderizan los equipos -->
+            </ul>
+        </nav>
+    </header>
+    <main id="render-main" class="min-h-[65vh] md:min-h-[60vh] h-auto md:m-0 flex justify-center items-center">
+        <!-- aca se renderiza el quipo selecionado -->
+        <h3 class="text-bold text-center text-[25px] md:text-[50px]">Seleccione algun Equipo de la barra superior!</h3>
+    </main>
+    <footer class="h-[10vh] w-full border-t-2 border-black mt-10 md:mt-0 flex justify-center items-center">
+        <p class="p-2 mt-2 text-justify md:text-center w-[90%]">
+            Creado por el grupo los dragos dorados, con el objetivo de realizar el trabajo practico numero 4
+        </p>
+    </footer>
+</body>
+
+<script src="index.js"></script>
+
+</html>
