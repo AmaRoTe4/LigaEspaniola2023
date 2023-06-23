@@ -4,13 +4,18 @@ let btnInputFiltro = document.getElementById("btn-input-filtro");
 let TodosEquipos = [];
 let EquiposRender = [];
 
-const FiltroEquipos = (text) => {
-    EquiposRender = [];
-    EquiposRender = [
-        ...TodosEquipos
-        .filter(n => n.nameShow.toLowerCase().includes(text.toLowerCase()))
-    ]
-}
+const FiltroEquipos = (text, filtro) => {
+  EquiposRender = [];
+  EquiposRender = 
+    TodosEquipos
+      .filter((n) => 
+        n.nameShow.toLowerCase().includes(text.toLowerCase()) 
+        && (filtro === 0 || filtro === n.gender)
+      );
+
+  console.log(text)
+  console.log(filtro)
+};
 
 const cargarEquipos = async () => {
   const data = await fetch("./data/index.json")
@@ -23,7 +28,7 @@ const cargarEquipos = async () => {
     });
 
   if (data !== undefined) data.team.map((n) => TodosEquipos.push(n));
-  EquiposRender = [...TodosEquipos]
+  EquiposRender = [...TodosEquipos];
 };
 
 const AgregarEquipos = () => {
@@ -72,7 +77,7 @@ const AgregarEquipos = () => {
 
   lista.forEach((equipo) => {
     equipo.addEventListener("click", (e) => {
-        mostrarInfoDeEquipo(equipo.dataset.equipo);
+      mostrarInfoDeEquipo(equipo.dataset.equipo);
     });
   });
 };
@@ -90,14 +95,13 @@ function isColorBlendableWithWhite(hexColor, contrastThreshold = 1.8) {
 
 const mostrarInfoDeEquipo = (id) => {
   const render = document.querySelector("#render-main");
-  const dataTeam = TodosEquipos.find(n => n.id === id);
-  
-  if(dataTeam === undefined) return;
-  
+  const dataTeam = TodosEquipos.find((n) => n.id === id);
+
+  if (dataTeam === undefined) return;
+
   //true = poner en negro
   //false = poner en blanco
   const renderColor = isColorBlendableWithWhite(dataTeam.color1);
-  
 
   render.innerHTML = `
         <div class="w-full min-h-full h-auto flex flex-col md:flex-row">
@@ -180,20 +184,80 @@ const mostrarInfoDeEquipo = (id) => {
 
 const Buscador = () => {
   const navBar = document.getElementById("navbar");
+  const formBusqueda = document.getElementById("form-busqueda");
+
+  const funcionDeCierre = () => {
+    const formBusqueda = document.getElementById("form-busqueda");
+    navBar.removeChild(formBusqueda);
+    EquiposRender = [...TodosEquipos];
+    AgregarEquipos();
+  }
+
+  if (formBusqueda) {
+    funcionDeCierre()
+    return;
+  };
 
   navBar.insertAdjacentHTML(
     "afterbegin",
     `
-        <form id="form-busqueda" class="h-[40px] w-full flex justify-center items-center">
-            <div class="w-full h-full flex justify-center items-center">
+        <form id="form-busqueda" class="h-[100px] md:h-[40px] w-full flex flex-col md:flex-row justify-center md:justify-around items-center">
+            <div class="w-[100%] md:w-[40%] h-[40px] md:h-full flex justify-center items-center">
+                <div class="w-[25%] h-[40px] md:h-full flex justify-center items-center">
+                  <label class="text-sm mx-1 md:mx-1 md:mx-3">
+                    Todos 
+                  </label>
+                  <input
+                    checked
+                    class="visualSelector"
+                    type="radio" 
+                    name="visualP" 
+                    id="0" 
+                  > 
+                </div>
+                <div class="w-[25%] h-[40px] md:h-full flex justify-center items-center">
+                  <label class="text-sm mx-1 md:mx-3">
+                    1 al 6 
+                  </label>
+                  <input
+                    class="visualSelector"
+                    type="radio" 
+                    name="visualP" 
+                    id="1" 
+                  > 
+                </div>
+                <div class="w-[25%] h-[40px] md:h-full flex justify-center items-center">
+                  <label class="text-sm mx-1 md:mx-3">
+                    7 al 13
+                  </label>
+                  <input
+                    class="visualSelector"
+                    type="radio" 
+                    name="visualP" 
+                    id="2" 
+                  >
+                </div>
+                <div class="w-[25%] h-[40px] md:h-full flex justify-center items-center">
+                  <label class="text-sm mx-1 md:mx-3">
+                    14 al 20
+                  </label>
+                  <input
+                    class="visualSelector"
+                    type="radio" 
+                    name="visualP" 
+                    id="3" 
+                  >
+                </div>
+            </div>
+            <div class="w-full md:w-[30%] h-full flex justify-center items-center">
                 <input
-                    class="text-[20px] border-b border-black h-full"
+                    class="text-[20px] max-w-[90%] border-b border-black h-full"
                     type="text" 
                     name="busqueda" 
                     id="text-busqueda" 
                     placeholder="Nombre del equipo"
                 >
-                <button id="btn-cerrarVista" class="h-[20px] w-[20px] m-2">
+                <button id="btn-cerrarVista" class="min-h-[20px] min-w-[20px] m-2">
                     <img src="./images/cruzNegra.svg" class="h-full w-full">
                 </button>
             </div>
@@ -202,20 +266,35 @@ const Buscador = () => {
   );
 
   const btnCierre = document.getElementById("btn-cerrarVista");
-  const formBusqueda = document.getElementById("form-busqueda");
   const textBusqueda = document.getElementById("text-busqueda");
+  const inputsRadio = document.querySelectorAll(".visualSelector");
+  
+  const obtenerFiltro = () => {
+    let filtro = 0
+    inputsRadio.forEach(n => {
+      if(n.checked) filtro = Number(n.id);
+    });
+    return filtro
+  }
 
   btnCierre.addEventListener("click", (e) => {
     e.preventDefault();
-    navBar.removeChild(formBusqueda);
-    EquiposRender = [...TodosEquipos]
-    AgregarEquipos()
+    funcionDeCierre();
+  });
+  
+  textBusqueda.addEventListener("input", (e) => {
+    let filtro = obtenerFiltro() 
+    FiltroEquipos(e.target.value, filtro);
+    AgregarEquipos();
   });
 
-  textBusqueda.addEventListener("input", (e) => {
-    FiltroEquipos(e.target.value);
-    AgregarEquipos()
-  });
+  inputsRadio.forEach(n => {
+    n.addEventListener("change", (e) => {
+      let filtro = obtenerFiltro() 
+      FiltroEquipos(textBusqueda.value , filtro);
+      AgregarEquipos();
+    });
+  })
 };
 
 btnInputFiltro.addEventListener("click", () => {

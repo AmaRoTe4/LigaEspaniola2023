@@ -152,7 +152,7 @@
       "shield_big": "https://t.resfu.com/img_data/escudos/medium/975.jpg?size=200x&lossy=1&v=28",
       "shield_png": "https://t.resfu.com/img_data/equipos/975.png?size=200x&ext=png&lossy=1&11",
       "flag": "https://t.resfu.com/media/img/flags/st3/large/es.png?size=200x&ext=png&lossy=1&11",
-      "gender": 1
+      "gender": 2
     },
     {
       "id": "998",
@@ -174,7 +174,7 @@
       "shield_big": "https://t.resfu.com/img_data/escudos/medium/998.jpg?size=200x&lossy=1&v=28",
       "shield_png": "https://t.resfu.com/img_data/equipos/998.png?size=200x&ext=png&lossy=1&11",
       "flag": "https://t.resfu.com/media/img/flags/st3/large/es.png?size=200x&ext=png&lossy=1&11",
-      "gender": 1
+      "gender": 2
     },
     {
       "id": "1217",
@@ -196,7 +196,7 @@
       "shield_big": "https://t.resfu.com/img_data/escudos/medium/1217.jpg?size=200x&lossy=1&v=28",
       "shield_png": "https://t.resfu.com/img_data/equipos/1217.png?size=200x&ext=png&lossy=1&11",
       "flag": "https://t.resfu.com/media/img/flags/st3/large/es.png?size=200x&ext=png&lossy=1&11",
-      "gender": 1
+      "gender": 2
     },
     {
       "id": "1236",
@@ -218,7 +218,7 @@
       "shield_big": "https://t.resfu.com/img_data/escudos/medium/1236.jpg?size=200x&lossy=1&v=28",
       "shield_png": "https://t.resfu.com/img_data/equipos/1236.png?size=200x&ext=png&lossy=1&11",
       "flag": "https://t.resfu.com/media/img/flags/st3/large/es.png?size=200x&ext=png&lossy=1&11",
-      "gender": 1
+      "gender": 2
     },
     {
       "id": "1623",
@@ -240,7 +240,7 @@
       "shield_big": "https://t.resfu.com/img_data/escudos/medium/1623.jpg?size=200x&lossy=1&v=28",
       "shield_png": "https://t.resfu.com/img_data/equipos/1623.png?size=200x&ext=png&lossy=1&11",
       "flag": "https://t.resfu.com/media/img/flags/st3/large/es.png?size=200x&ext=png&lossy=1&11",
-      "gender": 1
+      "gender": 2
     },
     {
       "id": "1887",
@@ -262,7 +262,7 @@
       "shield_big": "https://t.resfu.com/img_data/escudos/medium/1887.jpg?size=200x&lossy=1&v=28",
       "shield_png": "https://t.resfu.com/img_data/equipos/1887.png?size=200x&ext=png&lossy=1&11",
       "flag": "https://t.resfu.com/media/img/flags/st3/large/es.png?size=200x&ext=png&lossy=1&11",
-      "gender": 1
+      "gender": 2
     },
     {
       "id": "2120",
@@ -284,7 +284,7 @@
       "shield_big": "https://t.resfu.com/img_data/escudos/medium/2120.jpg?size=200x&lossy=1&v=28",
       "shield_png": "https://t.resfu.com/img_data/equipos/2120.png?size=200x&ext=png&lossy=1&11",
       "flag": "https://t.resfu.com/media/img/flags/st3/large/es.png?size=200x&ext=png&lossy=1&11",
-      "gender": 1
+      "gender": 2
     },
     {
       "id": "2080",
@@ -306,7 +306,7 @@
       "shield_big": "https://t.resfu.com/img_data/escudos/medium/2080.jpg?size=200x&lossy=1&v=28",
       "shield_png": "https://t.resfu.com/img_data/equipos/2080.png?size=200x&ext=png&lossy=1&11",
       "flag": "https://t.resfu.com/media/img/flags/st3/large/es.png?size=200x&ext=png&lossy=1&11",
-      "gender": 1
+      "gender": 3
     },
     {
       "id": "486",
@@ -328,7 +328,7 @@
       "shield_big": "https://t.resfu.com/img_data/escudos/medium/486.jpg?size=200x&lossy=1&v=28",
       "shield_png": "https://t.resfu.com/img_data/equipos/486.png?size=200x&ext=png&lossy=1&11",
       "flag": "https://t.resfu.com/media/img/flags/st3/large/es.png?size=200x&ext=png&lossy=1&11",
-      "gender": 1
+      "gender": 3
     },
     {
       "id": "2107",
@@ -350,7 +350,7 @@
       "shield_big": "https://t.resfu.com/img_data/escudos/medium/2107.jpg?size=200x&lossy=1&v=28",
       "shield_png": "https://t.resfu.com/img_data/equipos/2107.png?size=200x&ext=png&lossy=1&11",
       "flag": "https://t.resfu.com/media/img/flags/st3/large/es.png?size=200x&ext=png&lossy=1&11",
-      "gender": 1
+      "gender": 3
     },
     {
       "id": "2654",
@@ -372,7 +372,7 @@
       "shield_big": "https://t.resfu.com/img_data/escudos/medium/2654.jpg?size=200x&lossy=1&v=28",
       "shield_png": "https://t.resfu.com/img_data/equipos/2654.png?size=200x&ext=png&lossy=1&11",
       "flag": "https://t.resfu.com/media/img/flags/st3/large/es.png?size=200x&ext=png&lossy=1&11",
-      "gender": 1
+      "gender": 3
     },
     {
       "id": "1102",
@@ -394,7 +394,7 @@
       "shield_big": "https://t.resfu.com/img_data/escudos/medium/1102.jpg?size=200x&lossy=1&v=28",
       "shield_png": "https://t.resfu.com/img_data/equipos/1102.png?size=200x&ext=png&lossy=1&11",
       "flag": "https://t.resfu.com/media/img/flags/st3/large/es.png?size=200x&ext=png&lossy=1&11",
-      "gender": 1
+      "gender": 3
     },
     {
       "id": "2647",
@@ -416,7 +416,7 @@
       "shield_big": "https://t.resfu.com/img_data/escudos/medium/2647.jpg?size=200x&lossy=1&v=28",
       "shield_png": "https://t.resfu.com/img_data/equipos/2647.png?size=200x&ext=png&lossy=1&11",
       "flag": "https://t.resfu.com/media/img/flags/st3/large/es.png?size=200x&ext=png&lossy=1&11",
-      "gender": 1
+      "gender": 3
     },
     {
       "id": "2716",
@@ -438,7 +438,7 @@
       "shield_big": "https://t.resfu.com/img_data/escudos/medium/2716.jpg?size=200x&lossy=1&v=28",
       "shield_png": "https://t.resfu.com/img_data/equipos/2716.png?size=200x&ext=png&lossy=1&11",
       "flag": "https://t.resfu.com/media/img/flags/st3/large/es.png?size=200x&ext=png&lossy=1&11",
-      "gender": 1
+      "gender": 3
     }
   ]
 }
